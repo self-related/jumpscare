@@ -211,12 +211,8 @@
     
                 getRandomTimeSec(maxTime) {
                     const minTime = 7;
-                    let randomTime = Math.floor(Math.random() * maxTime) + minTime;
+                    const randomTime = Math.floor(Math.random() * (maxTime - minTime) + minTime);
 
-                    if (randomTime > maxTime) {
-                        randomTime = minTime + randomTime - maxTime;
-                    }
-    
                     return randomTime;
                 }
                 
