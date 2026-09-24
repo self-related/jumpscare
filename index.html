@@ -160,7 +160,7 @@
                     this.element = document.getElementById(id);
                     
                     if (!this.element) {
-                        throw("Counter couldn't be constructed");
+                        throw new Error("Counter couldn't be constructed");
                     }
                     
                     this.value = Number(this.element.innerText);
